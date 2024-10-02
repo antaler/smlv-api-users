@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: smlv-api-users
+  config:
+    import: "optional:configserver:"
+
+  
