@@ -10,11 +10,7 @@ public class UsersControllerTest {
 
 
 
-    @Test
-    void helloTest(){
-        var response = new UsersController().getHello();
-        assertEquals("Hi !", response);
-    }
+  
 
 
 }

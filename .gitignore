@@ -33,3 +33,8 @@ build/
 .vscode/
 
 .env
+
+
+.local_mysql_data
+
+docker-compose.local.yml

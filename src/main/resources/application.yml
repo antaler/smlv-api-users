@@ -3,5 +3,33 @@ spring:
     name: smlv-api-users
   config:
     import: "optional:configserver:"
-
+  datasource:
+    url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_DATABASE}
+    username: ${DB_USER}
+    password: ${DB_PASS}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  sql:
+    init:
+      platform: org.hibernate.dialect.MySQLDialect
+  mail:
+    host: ${MAIL_HOST}
+    port: ${MAIL_PORT}
+    username: ${MAIL_USER}
+    password: ${MAIL_PASS}
+    default-encoding: UTF-8
   
+
+app-smlv:
+  mail:
+    enabled: false
+  keys:
+    pub: ${PUB_KEY}
+
+
+logging:
+  level:
+    '[com.antaler.smlv.apis.users.services.mail]': TRACE
