@@ -9,7 +9,7 @@ import jakarta.persistence.IdClass;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "user_health")
+@Table(name = "SMLV_HEALTH")
 @IdClass(value = UserHealthId.class)
 public class UserHealth{
 
@@ -19,10 +19,10 @@ public class UserHealth{
     @Id
     private LocalDateTime registerDate;
 
-    @Column(name="height")
+    @Column(name="HEIGHT")
     private String height;
 
-    @Column(name= "weight")
+    @Column(name= "WEIGHT")
     private String weight;
 
 
