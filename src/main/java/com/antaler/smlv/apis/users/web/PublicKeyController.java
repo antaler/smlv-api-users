@@ -1,6 +1,7 @@
 package com.antaler.smlv.apis.users.web;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -22,7 +23,7 @@ public class PublicKeyController {
         this.keyService = keyService;
     }
 
-    @GetMapping
+    @GetMapping(produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseStatus(code = HttpStatus.OK)
     public Mono<String> getPublicKey() {
         return keyService.getPublicKey();

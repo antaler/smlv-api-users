@@ -27,6 +27,10 @@ app-smlv:
     enabled: false
   keys:
     pub: ${PUB_KEY}
+    priv: ${PRIV_KEY}
+  token:
+    issuer: SMLV
+    expiresSeconds: 900
 
 
 logging:
