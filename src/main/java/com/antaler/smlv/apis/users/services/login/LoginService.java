@@ -1,19 +1,14 @@
 package com.antaler.smlv.apis.users.services.login;
 
-import com.antaler.smlv.apis.users.model.endpoints.SignInRequest;
-import com.antaler.smlv.apis.users.model.endpoints.SignInResponse;
+import com.antaler.smlv.apis.users.model.api.login.LoginDTO;
 
 import reactor.core.publisher.Mono;
 
-public interface LoginService {
+public sealed interface LoginService permits LoginServiceImpl{
 
 
-    Mono<SignInResponse> login(SignInRequest request);
-    
-    Mono<Boolean> validateInvitation(String invitationToken);
-
-
-    Mono<SignInResponse> registerUser(String invitationToken, Object user)
+  
+    Mono<Object> loginUserAndPassword(LoginDTO login);
 
 
 

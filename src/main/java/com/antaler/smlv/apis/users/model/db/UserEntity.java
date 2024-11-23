@@ -4,9 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -19,37 +17,36 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "user")
-@JsonIgnoreProperties(ignoreUnknown = true)
+@Table(name = "SMLV_USERS")
 public class UserEntity {
 
     @Id
     @GeneratedValue(strategy =  GenerationType.UUID)
-    @Column(name = "id",unique = true)
+    @Column(name = "ID",unique = true)
     private String id;
 
-    @Column(name = "alias")
+    @Column(name = "ALIAS")
     private String alias;
     
-    @Column(name = "email", unique = true)
+    @Column(name = "EMAIL", unique = true)
     private String email;
 
-    @Column(name = "birth_date" )
+    @Column(name = "BIRTH_DATE")
     private Date birthDate;
 
-    @Column(name = "gender")
+    @Column(name = "GENDER")
     private Character gender;
     
-    @Column(name= "password")
+    @Column(name= "PASSWORD")
     private String password; 
 
-    @Column(name= "verified")
-    private boolean verified;
+    @Column(name= "INVITATIONS")
+    private Integer  invitations;
 
-    @Column(name= "two_fa_seed")
+    @Column(name= "TWO_FA_SEED")
     private String  twoFaSeed;
     
-    @Column(name="tw_fa_recovery_codes")
+    @Column(name="TW_FA_RECOVERY_CODES")
     private String twFaRecoveryCodes;
 
     @JsonIgnore
