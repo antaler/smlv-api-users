@@ -49,6 +49,9 @@ public class UserEntity {
     @Column(name="TW_FA_RECOVERY_CODES")
     private String twFaRecoveryCodes;
 
+    @Column(name="STATUS_LOGIN")
+    private String statusLogin;
+
     @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY)
     private List<UserHealth> healths; 

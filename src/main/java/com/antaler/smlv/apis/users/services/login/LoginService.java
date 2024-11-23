@@ -10,6 +10,10 @@ public sealed interface LoginService permits LoginServiceImpl{
   
     Mono<Object> loginUserAndPassword(LoginDTO login);
 
+    Mono<String> loginUserAndTwoFa(LoginDTO login);
+
+    Mono<String> refresh(String token);
+
 
 
 

@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.antaler.smlv.apis.users.properties.key.KeysProperties;
 import com.antaler.smlv.apis.users.properties.mail.EmailProperties;
+import com.antaler.smlv.apis.users.properties.token.TokenProperties;
 
 import lombok.Data;
 
@@ -17,5 +18,7 @@ public class AppProperties {
     private EmailProperties mail;
 
     private KeysProperties keys;
+
+    private TokenProperties token;
 
 }
